@@ -10,4 +10,4 @@
     ~/.zshrc: zshrc
 
 - shell:
-    - git update-submodules 
+    - [git submodule update --init --recursive, Installing submodules]

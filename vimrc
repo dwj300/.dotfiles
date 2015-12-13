@@ -20,21 +20,16 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Colorscheme
 NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'whatyouhide/vim-gotham'
 
 " File navigation
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'myusuf3/numbers.vim'
-
-" Git integration
-NeoBundle 'tpope/vim-fugitive'
 
 " Status bar plugins
 NeoBundle 'bling/vim-airline'
 
 " Syntax Checking
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'tpope/vim-surround'
 NeoBundle 'ervandew/supertab'
 
 call neobundle#end()
@@ -169,8 +164,8 @@ set showmatch
 " tabs and indenting {{{
 " -----------------------------------------------------------------------------
 
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab
 
 " }}}

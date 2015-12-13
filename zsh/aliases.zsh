@@ -10,13 +10,15 @@ alias mv='mv -i'
 # Git commands
 alias gs='git status'
 alias ga='git add'
-alias gr='git remove'
+alias gr='git rm'
 alias gc='git commit'
 alias gpd='git pull'
 alias gpu='git push'
 alias gd='git diff'
+alias gbl='git blame'
 alias gb='git branch'
 alias gco='git checkout'
+alias gm='git merge'
 
-# Environments
+# Environment
 alias da='deactivate'

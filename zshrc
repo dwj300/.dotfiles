@@ -1,33 +1,16 @@
-# Allow local customizations in the ~/.zshrc_local_before file
-if [ -f ~/.zshrc_local_before ]; then
-    source ~/.zshrc_local_before
-fi
+# Path to antigen clone
+export ZSH=$HOME/.dotfiles/zsh/antigen/antigen.zsh
+source $ZSH
 
-# External plugins (initialized before)
-source ~/.zsh/plugins_before.zsh
-
-# Settings
-source ~/.zsh/settings.zsh
-
-# Bootstrap
-source ~/.zsh/bootstrap.zsh
-
-# External settings
-source ~/.zsh/external.zsh
+# Load the oh-my-zsh's library.
+# Need to use oh-my-zsh library for any bundle use
+antigen use oh-my-zsh
 
 # Aliases
 source ~/.zsh/aliases.zsh
 
-# Custom prompt
-source ~/.zsh/prompt.zsh
+# Bundles
+source ~/.zsh/bundles.zsh
 
-# Syntax highlighting
-source ~/.zsh/syntax.zsh
-
-# External plugins (initialized after)
-source ~/.zsh/plugins_after.zsh
-
-# Allow local customizations in the ~/.zshrc_local_after file
-if [ -f ~/.zshrc_local_after ]; then
-    source ~/.zshrc_local_after
-fi
+# Tell antigen its good to go
+antigen apply
