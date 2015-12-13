@@ -9,6 +9,8 @@ alias mv='mv -i'
 
 # Git commands
 alias gs='git status'
+alias ga='git add'
+alias gr='git remove'
 alias gc='git commit'
 alias gpd='git pull'
 alias gpu='git push'
