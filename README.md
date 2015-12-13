@@ -20,4 +20,4 @@ Technical Listing
     sh install
 
 ### See something wrong?
-    [Submit an issue!](https://github.com/kleimkuhler/dotfiles/issues/new)
+[Submit an issue!](https://github.com/kleimkuhler/dotfiles/issues/new)
