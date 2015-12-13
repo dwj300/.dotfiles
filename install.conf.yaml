@@ -1,6 +1,7 @@
 - clean: ['~', '~/.config']
 
 - link:
+    ~/.antigen: zsh/antigen
     ~/.dotfiles: ''
     ~/.gitconfig: gitconfig
     ~/.gitignore_global: gitignore_global
