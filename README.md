@@ -3,10 +3,7 @@ Dotfiles
 
 Hi thanks for checking out my dotfiles. Within this repository you are able to
 see a little preview of how I have configured the tools that I use everyday to
-make my work more efficient and effective. I have my more private configurations
-within a private repository but you'll be able to get a pretty good idea of my
-workflow from this.
-
+make my work more efficient and effective.
 Technical Listing
 -----------------
 
