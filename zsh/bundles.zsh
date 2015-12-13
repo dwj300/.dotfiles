@@ -1,5 +1,5 @@
 # Syntax highlighting
 antigen bundle zsh-users/zsh-syntax-highlighting
 
-# Theme
-antigen theme robbyrussell
+# Guess what to install when running an unknown command
+antigen bundle command-not-found
