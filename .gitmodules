@@ -1,0 +1,30 @@
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+[submodule "vim/bundle/neobundle.vim"]
+	path = vim/bundle/neobundle.vim
+	url = https://github.com/Shougo/neobundle.vim
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule "vim/bundle/numbers.vim"]
+	path = vim/bundle/numbers.vim
+	url = https://github.com/myusuf3/numbers.vim
+[submodule "vim/bundle/supertab"]
+	path = vim/bundle/supertab
+	url = https://github.com/ervandew/supertab
+[submodule "vim/bundle/syntastic"]
+	path = vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic
+[submodule "vim/bundle/vim-airline"]
+	path = vim/bundle/vim-airline
+	url = https://github.com/bling/vim-airline
+[submodule "vim/bundle/vim-colors-solarized"]
+	path = vim/bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized
+[submodule "zsh/plugins/zsh-completions"]
+	path = zsh/plugins/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions
+[submodule "zsh/plugins/zsh-syntax-highlighting"]
+	path = zsh/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
