@@ -12,5 +12,8 @@ source ~/.zsh/aliases.zsh
 # Bundles
 source ~/.zsh/bundles.zsh
 
+# Themes
+source ~/.zsh/themes.zsh
+
 # Tell antigen its good to go
 antigen apply
