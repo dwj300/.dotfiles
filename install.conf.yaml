@@ -2,10 +2,10 @@
 
 - link:
     ~/.antigen: zsh/antigen
-    ~/.dotfiles: ''
     ~/.gitconfig: gitconfig
     ~/.gitignore_global: gitignore_global
-    ~/.sshl
+    ~/.pythonrc: pythonrc
+    ~/.ssh/config: ssh/config
     ~/.vim: vim/
     ~/.vimrc: vimrc
     ~/.zsh: zsh/

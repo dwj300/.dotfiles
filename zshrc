@@ -15,6 +15,9 @@ source ~/.zsh/bundles.zsh
 # Themes
 source ~/.zsh/themes.zsh
 
+# TODO: Env vars
+export PYTHONSTARTUP=~/.pythonrc
+
 # Tell antigen its good to go
 antigen apply
 
