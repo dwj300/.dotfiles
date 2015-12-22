@@ -13,5 +13,7 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
-    - "RUN THIS: vim +NeoBundleInstall +qall, Installing neobundle packages"
+    - 
+      command: vim +NeoBundleInstall +qall
+      stdout: true
     - [zsh, "Installing antigen plugins"]
