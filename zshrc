@@ -17,3 +17,5 @@ source ~/.zsh/themes.zsh
 
 # Tell antigen its good to go
 antigen apply
+
+archey -c
