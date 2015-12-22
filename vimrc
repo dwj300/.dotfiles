@@ -1,235 +1,72 @@
-" -----------------------------------------------------------------------------
-" important {{{
-" -----------------------------------------------------------------------------
+" Neobundle
+" Note: Skip initialization for vim-tiny or vim-small.
+if 0 | endif
 
 if has('vim_starting')
-	if &compatible
-		set nocompatible
-	endif
+  if &compatible
+   set nocompatible " Be iMproved
+  endif
 
-	" Required
-	set runtimepath+=~/.vim/bundle/neobundle.vim/
+  " Required:
+  set runtimepath+=~/vim/bundle/neobundle.vim/
 endif
 
-" Required
- call neobundle#begin(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim' " Let NeoBundle manage NeoBundle (required)
 
-" Let NeoBundle manage NeoBundle
-" Required
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" Colorscheme
+" Solarized
 NeoBundle 'altercation/vim-colors-solarized'
-
-" File navigation
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'myusuf3/numbers.vim'
 
 " Status bar plugins
 NeoBundle 'bling/vim-airline'
 
-" Syntax Checking
+" NerdTree
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'Xuyuanp/nerdtree-git-plugin'
+
+" NerdCommenter
+NeoBundle 'scrooloose/nerdcommenter'
+
+" Numbers
+NeoBundle 'myusuf3/numbers.vim'
+
+" Syntax checking"
 NeoBundle 'scrooloose/syntastic'
+
+" Tab completion
 NeoBundle 'ervandew/supertab'
+
+" Ctrl-p
+NeoBundle 'ctrlpvim/ctrlp.vim'
 
 call neobundle#end()
 
-" Required
+" Required:
 filetype plugin indent on
-syntax enable
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
-" }}}
-
-" -----------------------------------------------------------------------------
-" moving around, searching and patterns {{{
-" -----------------------------------------------------------------------------
-
-set nostartofline
-set incsearch
-set ignorecase
-set smartcase
-
-" Make sure vim returns to the same line when you reopen a file
-augroup line_return
-	au!
-	au BufReadPost *
-	\ if line("'\"") > 0 && line("'\"") <= line("$") |
-	\     execute 'normal! g`"zvzz' |
-	\ endif
-augroup END
-
-" }}}
-
-" -----------------------------------------------------------------------------
-" tags {{{
-" -----------------------------------------------------------------------------
-
-" }}}
-
-" -----------------------------------------------------------------------------
-" displaying text {{{
-" -----------------------------------------------------------------------------
-
-set backspace=indent,eol,start
-"set list
-"set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
-set showbreak=↪
+" General Settings
 set number
-set scrolloff=3
-set sidescrolloff=2
+syntax enable
+set backspace=indent,eol,start
+let mapleader="\<Space>"
+" map<Space>=<leader> https://www.reddit.com/r/vim/comments/1vdrxg/space_is_a_big_key_what_do_you_map_it_to/
+set timeoutlen=1000 ttimeoutlen=0 "http://www.johnhawthorn.com/2012/09/vi-escape-delays/
+nnoremap <leader>w :w!<cr>
 
-" }}}
-
-" -----------------------------------------------------------------------------
-" syntax, highlighting and spelling {{{
-" -----------------------------------------------------------------------------
-
-set background=dark
-
-silent! colorscheme solarized 
-
-augroup markdown
-    au!
-    au BufRead,BufNew *.md set filetype=markdown
-    au BufRead,BufNewFile *.md setlocal textwidth=80
-augroup END
-
-" }}}
-
-" -----------------------------------------------------------------------------
-" multiple windows {{{
-" -----------------------------------------------------------------------------
-
-set laststatus=2
-
-" }}}
-
-" -----------------------------------------------------------------------------
-" multiple tab pages {{{
-" -----------------------------------------------------------------------------
-
-" }}}
-
-" -----------------------------------------------------------------------------
-" terminal {{{
-" -----------------------------------------------------------------------------
-
-set ttyfast
-
-" }}}
-
-" -----------------------------------------------------------------------------
-" using the mouse {{{
-" -----------------------------------------------------------------------------
-
-" }}}
-
-" -----------------------------------------------------------------------------
-" printing {{{
-" -----------------------------------------------------------------------------
-
-" }}}
-
-" -----------------------------------------------------------------------------
-" messages and info {{{
-" -----------------------------------------------------------------------------
-
-set showcmd
-set confirm
-set ruler
-
-" }}}
-
-" -----------------------------------------------------------------------------
-" selecting text {{{
-" -----------------------------------------------------------------------------
-
-set clipboard=unnamed
-
-" }}}
-
-" -----------------------------------------------------------------------------
-" editing text {{{
-" -----------------------------------------------------------------------------
-
-set showmatch
-
-" }}}
-
-" -----------------------------------------------------------------------------
-" tabs and indenting {{{
-" -----------------------------------------------------------------------------
-
+" Tabs and indenting
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set ts=4
+set autoindent
+set showmatch
+let python_highlight_all = 1
 
-" }}}
-
-" -----------------------------------------------------------------------------
-" folding {{{
-" -----------------------------------------------------------------------------
-augroup filetype_vim
-	autocmd!
-	autocmd FileType vim setlocal foldmethod=marker
-augroup END
-
-if has('folding')
-	set nofoldenable
-endif
-
-" }}}
-
-" -----------------------------------------------------------------------------
-" diff mode {{{
-" -----------------------------------------------------------------------------
-
-" }}}
-
-" -----------------------------------------------------------------------------
-" mapping {{{
-" -----------------------------------------------------------------------------
-
-let mapleader="\<Space>"
-
-inoremap jk <esc> 
-inoremap <esc> <nop>
-
-nnoremap <leader>sv :source $MYVIMRC<cr>
-
-nnoremap <leader>ne :NERDTreeToggl<cr>
-
-nnoremap <cr> G
-nnoremap <bs> gg
-
-nnoremap <Leader>w :w<cr>
-nnoremap <Leader>q :q<cr>
-nnoremap <Leader>x :wq<cr>
-
-nnoremap <Leader><Leader> V
-
-nnoremap <F3> :NumbersToggle<cr>
-nnoremap <F4> :NumbersOnOff<cr>
-
-nnoremap <c-j> <c-d>
-nnoremap <c-k> <c-u>
-
-" }}}
-
-" -----------------------------------------------------------------------------
-" reading and writing files {{{
-" -----------------------------------------------------------------------------
-
-" }}}
-
-" -----------------------------------------------------------------------------
-" the swap file {{{
-" -----------------------------------------------------------------------------
-
+" Swap files
 set backup                        " Enable backups
 set noswapfile                    " It's 2013, Vim.
 
@@ -242,49 +79,35 @@ if !isdirectory(expand(&undodir))
      call mkdir(expand(&undodir), "p")
 endif
 if !isdirectory(expand(&backupdir))
-	call mkdir(expand(&backupdir), "p")
+    call mkdir(expand(&backupdir), "p")
 endif
 if !isdirectory(expand(&directory))
-	call mkdir(expand(&directory), "p")
+    call mkdir(expand(&directory), "p")
 endif
 
-" }}}
+" Solarized
+set background=dark
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+let g:solarized_contrast="normal"
+let g:solarized_visibility="normal"
+color solarized
 
-" -----------------------------------------------------------------------------
-" command line editing {{{
-" -----------------------------------------------------------------------------
+" Airline
+let g:airline_theme = 'solarized'
+set laststatus=2 "shows airline all the time
+let g:airline_theme = 'solarized' "TODO, delete
 
-" }}}
+" NerdTree
+nnoremap <leader>ne :NERDTreeToggl<cr>
 
-" -----------------------------------------------------------------------------
-" executing external commands {{{
-" -----------------------------------------------------------------------------
+" Numbers
+highlight clear LineNr " Current line number row will have same background color in relative mode
+set cursorline " Highlight current line
 
-" }}}
+" Supertab
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" http://vim.wikia.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE
 
-" -----------------------------------------------------------------------------
-" running make and jumping to errors {{{
-" -----------------------------------------------------------------------------
-
-" }}}
-
-" -----------------------------------------------------------------------------
-" language specific {{{
-" -----------------------------------------------------------------------------
-
-" }}}
-
-" -----------------------------------------------------------------------------
-" multi-byte characters {{{
-" -----------------------------------------------------------------------------
-
-" }}}
-
-" -----------------------------------------------------------------------------
-" various {{{
-" -----------------------------------------------------------------------------
-
-" Close Vim if the only buffer open is NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-" }}}
+" Syntastic
+highlight clear SignColumn " SignColumn should match background
