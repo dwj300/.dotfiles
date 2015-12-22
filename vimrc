@@ -8,10 +8,10 @@ if has('vim_starting')
   endif
 
   " Required:
-  set runtimepath+=~/vim/bundle/neobundle.vim/
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#begin(expand('~/vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim' " Let NeoBundle manage NeoBundle (required)
 
 " Solarized
