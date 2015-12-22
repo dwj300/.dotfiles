@@ -5,6 +5,7 @@
     ~/.dotfiles: ''
     ~/.gitconfig: gitconfig
     ~/.gitignore_global: gitignore_global
+    ~/.sshl
     ~/.vim: vim/
     ~/.vimrc: vimrc
     ~/.zsh: zsh/

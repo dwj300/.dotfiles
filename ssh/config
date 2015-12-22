@@ -1,0 +1,58 @@
+Host solitude
+    HostName solitude.ist.psu.edu
+    Port 22
+    User dwj131
+
+Host lab218
+    HostName lab-218.cse.psu.edu
+    Port 22
+    User dwj131
+    UserKnownHostsFile /dev/null
+    StrictHostKeyChecking no
+
+Host ladon
+    HostName ladon.cse.psu.edu
+    Port 22
+    user dwj131
+
+Host pass
+    HostName thon-pass.vmhost.psu.edu
+    Port 1855
+    user dwj131
+
+Host hadoop
+    HostName cldraen.rcc.psu.edu
+    user dwj131
+
+Host cyberstar
+    HostName cyberstar.psu.edu
+    user dwj131
+
+Host hello
+    HostName ec2-54-82-23-2.compute-1.amazonaws.com
+    user ubuntu
+    IdentityFile ~/Code/aws.pem
+
+Host jenkins
+    HostName ec2-107-22-25-224.compute-1.amazonaws.com
+    user ubuntu
+    IdentityFile ~/Code/aws.pem
+
+Host thon-test
+    HostName thon-test.vmhost.psu.edu
+    Port 1855
+    user dwj131
+
+Host azure
+    HostName dougjordan.cloudapp.net
+    user azureuser
+    IdentityFile ~/Code/filename.pem
+
+Host github.com
+  Hostname ssh.github.com
+    Port 443
+
+Host thondev
+    Hostname dev.thon.vmhost.psu.edu
+    user dwj131
+    Port 1855

@@ -6,3 +6,6 @@ antigen bundle command-not-found
 
 # Add color to man pages
 antigen bundle colored-man-pages
+
+# Show battery status
+antigen bundle battery 
