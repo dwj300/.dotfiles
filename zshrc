@@ -18,4 +18,7 @@ source ~/.zsh/themes.zsh
 # Tell antigen its good to go
 antigen apply
 
+# Make sure this doesn't break on OS X
+export TERM=xterm-256color
+
 archey -c
