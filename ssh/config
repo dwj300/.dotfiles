@@ -1,3 +1,20 @@
+# THON
+Host pass
+    HostName thon-pass.vmhost.psu.edu
+    Port 1855
+    user dwj131
+
+Host thondev
+    Hostname dev.thon.vmhost.psu.edu
+    user dwj131
+    Port 1855
+
+Host thon-test
+    HostName thon-test.vmhost.psu.edu
+    Port 1855
+    user dwj131
+
+# PSU
 Host solitude
     HostName solitude.ist.psu.edu
     Port 22
@@ -15,11 +32,6 @@ Host ladon
     Port 22
     user dwj131
 
-Host pass
-    HostName thon-pass.vmhost.psu.edu
-    Port 1855
-    user dwj131
-
 Host hadoop
     HostName cldraen.rcc.psu.edu
     user dwj131
@@ -28,6 +40,7 @@ Host cyberstar
     HostName cyberstar.psu.edu
     user dwj131
 
+# Personal
 Host hello
     HostName ec2-54-82-23-2.compute-1.amazonaws.com
     user ubuntu
@@ -38,11 +51,6 @@ Host jenkins
     user ubuntu
     IdentityFile ~/Code/aws.pem
 
-Host thon-test
-    HostName thon-test.vmhost.psu.edu
-    Port 1855
-    user dwj131
-
 Host azure
     HostName dougjordan.cloudapp.net
     user azureuser
@@ -51,8 +59,3 @@ Host azure
 Host github.com
   Hostname ssh.github.com
     Port 443
-
-Host thondev
-    Hostname dev.thon.vmhost.psu.edu
-    user dwj131
-    Port 1855
