@@ -86,12 +86,14 @@ if !isdirectory(expand(&directory))
 endif
 
 " Solarized
-set background=dark
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-let g:solarized_contrast="normal"
-let g:solarized_visibility="normal"
-color solarized
+if filereadable(expand("~/.vim/bundle/vim-colors-solarized/colors/solarized.vim"))
+    set background=dark
+    let g:solarized_termcolors=256
+    let g:solarized_termtrans=1
+    let g:solarized_contrast="normal"
+    let g:solarized_visibility="normal"
+    color solarized
+endif
 
 " Airline
 let g:airline_theme = 'solarized'
