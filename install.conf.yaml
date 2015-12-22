@@ -16,4 +16,7 @@
     - 
       command: vim +NeoBundleInstall +qall
       stdout: true
-    - [zsh, "Installing antigen plugins"]
+    - 
+      command: zsh zshrc
+      stdout: true
+      stderr: true

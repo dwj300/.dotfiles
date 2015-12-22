@@ -24,4 +24,4 @@ antigen apply
 # Make sure this doesn't break on OS X
 export TERM=xterm-256color
 
-archey -c
+[ archey ] && archey
