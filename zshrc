@@ -12,16 +12,13 @@ source ~/.zsh/aliases.zsh
 # Bundles
 source ~/.zsh/bundles.zsh
 
-# Themes
-source ~/.zsh/themes.zsh
+# Theme
+source ~/.zsh/theme.zsh
 
-# TODO: Env vars
-export PYTHONSTARTUP=~/.pythonrc
+# Environment Variables
+source ~/.zsh/env_vars.zsh
 
 # Tell antigen its good to go
 antigen apply
-
-# Make sure this doesn't break on OS X
-export TERM=xterm-256color
 
 [ archey ] && archey

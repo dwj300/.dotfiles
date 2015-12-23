@@ -66,6 +66,9 @@ set autoindent
 set showmatch
 let python_highlight_all = 1
 
+" For html files
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
+
 " Swap files
 set backup                        " Enable backups
 set noswapfile                    " It's 2013, Vim.
