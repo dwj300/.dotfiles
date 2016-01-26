@@ -15,7 +15,7 @@ Host thon-test
     user dwj131
 
 Host think
-    HostName think-ahead.vmhost.psu.edu                                               [56%]
+    HostName think-ahead.vmhost.psu.edu
     Port 1855
     user dwj131
 
