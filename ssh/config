@@ -14,6 +14,11 @@ Host thon-test
     Port 1855
     user dwj131
 
+Host think
+    HostName think-ahead.vmhost.psu.edu                                               [56%]
+    Port 1855
+    user dwj131
+
 # PSU
 Host solitude
     HostName solitude.ist.psu.edu
