@@ -30,4 +30,5 @@ PERL_MB_OPT="--install_base \"/Users/Doug/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/Users/Doug/perl5"; export PERL_MM_OPT;
  
 export WORKON_HOME=~/Envs
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 source /usr/local/bin/virtualenvwrapper.sh

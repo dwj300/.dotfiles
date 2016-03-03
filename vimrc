@@ -19,6 +19,7 @@ NeoBundle 'altercation/vim-colors-solarized'
 
 " Status bar plugins
 NeoBundle 'bling/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
 
 " NerdTree
 NeoBundle 'scrooloose/nerdtree'

@@ -7,6 +7,9 @@ alias l='ls'
 alias cp='cp -i'
 alias mv='mv -i'
 
+# Hub
+alias git=hub
+
 # Git commands
 alias gs='git status'
 alias ga='git add'
